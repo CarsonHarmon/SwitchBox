@@ -1,0 +1,5 @@
+sniff(filter=, prn=UrFunction) 
+
+when sniffin u get a list 
+list like this
+list[packetNum][layer]
