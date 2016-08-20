@@ -4,9 +4,16 @@ from SwitchBox import SwitchBox
 import argparse
 
 def main():
+	parser = argparse.ArgumentParser(description = "Parser for Switch", usage = "Example usage: switch -i 192.168.1. -pn") 
+	parser.add_argument("-sh", metavar = "t", help="Scan Host")
+	parser.add_argument("-p", metavar = "p", help="Target Ports (Default 80 and 22)")
+	parser.add_argument("-sn", metavar = "sn", help="Scan Network") 
+	parser.add_argument("-pi", metavar = "pi", help ="Ping Target") 
+	parser.add_argument("-pn", metavar = "pn", help = "Ping Network")
+	#parser.add_argument "-v", metavar = "v", help = "Verbosity(0-2)") 
+	parser.add_argument("-i", metavar = "i", help="Basic IP shit", required = True) 
+	args = parser.parse_args()	
 	
-	s = SwitchBox("192.168.2.", 0)
-	s.pingSweep()
 
 main()   
 	
