@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import logging
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from SwitchBox import SwitchBox
